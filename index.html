@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg">
+    <title>Palestine Solidarity</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #c4c3ca;
+            background-color: #1f2029;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        header {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 15px 30px;
+           background: #7B1818;
+           color: white;
+           transition: background-color 0.3s ease;
+        }
+        .logo {
+           font-size: 24px;
+           font-weight: bold;
+           color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+           text-decoration: none;
+           color: white;
+           font-weight: bold;
+           transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+           color: #FFD700; /* Gold color when hovered */
+        }
+
+        nav ul li a.active {
+           text-decoration: underline;
+           color: #90EE90;
+        }
+        
+        .flag {
+           width: 30px;
+           height: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 50px;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .content img {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .campaigns {
+            text-align: center;
+            padding: 40px;
+            background-color: #2a2b38;
+            color: #ffeba7;
+        }
+        .campaigns h2 {
+            margin-bottom: 20px;
+        }
+        .news-section {
+            padding: 40px;
+            text-align: center;
+        }
+        .news-item {
+            background-color: #2a2b38;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .news-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #7B1818;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .support {
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(56, 142, 60, 0.83);
+            color: white;
+        }
+        
+        .donation-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        }
+        
+        .donation-form input, .donation-form button {
+        padding: 10px;
+        width: 250px;
+        border-radius: 5px;
+        border: none;
+        }
+        
+        .donation-form button {
+        background-color: #7B1818;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        }
+        
+        .donation-form button:hover {
+        background-color: #A22020;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #7B1818;
+            color: white;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Palestine Solidarity</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" alt="Palestine Flag" class="flag"></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Welcome to Palestine Solidarity</h1>
+        <p>Supporting justice, peace, and human rights.</p>
+    </section>
+    
+    <section class="content">
+        <img src="palestine.jpg" alt="Palestine Solidarity">
+        <h2>The Struggle for Freedom</h2>
+        <p>Palestine's history is one of resilience and perseverance. For decades, the Palestinian people have fought for their rights, sovereignty, and justice. The international community continues to rally in support of a free Palestine, advocating for peace and human dignity. Join us in spreading awareness and taking action towards a just future.</p>
+    </section>
+    
+    <section class="campaigns">
+        <h2>Our Campaigns</h2>
+        <p>We run various campaigns to support Palestine, from raising awareness to advocating policy changes. Get involved today!</p>
+    </section>
+    
+    <section class="news-section">
+        <h2>Latest News</h2>
+        <a href="news.html" class="news-button">Read News</a>
+    </section>
+    
+    <section class="support">
+    <h2>Support The Ones In Need</h2>
+    <p>Donate, volunteer, or spread the word. Every action counts!</p>
+    <form action="home.html" method="POST" class="donation-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="amount">Donation Amount (RM):</label>
+        <input type="number" id="amount" name="amount" min="1" required>
+        
+        <button type="submit">Donate Now</button>
+    </form>
+</section>
+
+<script>
+        document.getElementById("donationForm").addEventListener("submit", function(event) {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var amount = document.getElementById("amount").value;
+            
+            if (!name || !email || !amount || amount <= 0) {
+                event.preventDefault();
+                alert("Please fill out all fields correctly.");
+            } else {
+                event.preventDefault();
+                alert("Thank you for your donation!");
+                window.location.href = "home.html";
+            }
+        });
+</script>
+    
+    <footer>
+        <p>&copy; 2025 Palestine Solidarity</p>
+    </footer>
+</body>
+</html>

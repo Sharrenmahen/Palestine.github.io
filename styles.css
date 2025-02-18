@@ -1,0 +1,295 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1f2029;
+    text-align: center;
+    color: white;
+}
+
+/* Header Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #7B1818;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+    color: #90EE90;
+}
+
+.flag {
+    width: 30px;
+    height: 20px;
+}
+
+/* About Section */
+.about {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: red;
+}
+
+h3 {
+    color: green;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid white;
+    padding: 20px;
+    margin: 20px 0;
+    background: #1f2029;
+}
+
+.text {
+    width: 60%;
+    text-align: justify;
+}
+
+.image-placeholder {
+    width: 120px;
+    height: 120px;
+    background: lightgray;
+    border: 2px solid white;
+}
+
+/* Vision & History Section */
+.vision-history-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.vision, .history {
+    width: 48%; /* Both sections take equal width */
+    border: 3px solid black;
+    padding: 20px;
+    background: lightgreen; /* Light Green Background */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: black;
+    text-align: justify;
+}
+
+.vision h2, .history h2 {
+    color: black;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.vision p, .history p, 
+.vision ul, .history ul {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.vision ul, .history ul {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.vision ul li, .history ul li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* Responsive Design: Stack on Mobile */
+@media (max-width: 768px) {
+    .vision-history-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vision, .history {
+        width: 100%;
+    }
+}
+
+/* Our Mission Section (Fixed Layout) */
+.mission-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.mission-text {
+    flex: 1;
+    text-align: justify;
+}
+
+.mission-text h2 {
+    color: red;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.mission-text ul {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.mission-text ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.mission-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mission-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .mission-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mission-text {
+        text-align: justify;
+    }
+
+    .mission-image {
+        margin-top: 20px;
+    }
+}
+
+/* Our Opposition Section (Redesigned to Match Wireframe) */
+.opposition {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    background: #1f2029;
+    border: 2px solid white;
+    text-align: left;
+}
+
+.opposition h2 {
+    text-align: center;
+    color: #E40303;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.opposition p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.opposition ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.opposition ul li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Opposition Section */
+.opposition-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center;
+    padding: 40px;
+}
+
+.opposition img {
+    display: block;  /* Ensures the image behaves like a block element */
+    margin: 0 auto;  /* Centers the image horizontally */
+    text-align: center; /* Ensures it's aligned properly */
+    max-width: 100%; /* Ensures responsiveness */
+}
+
+/* Footer */
+footer {
+    background: #7B1818;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: auto;
+}
+
+.column {
+    text-align: left;
+}
+
+.copyright {
+    margin-top: 10px;
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg">
+    <title>Palestine Solidarity</title>
+    <style>
+            body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #c4c3ca;
+    background-color: #1f2029;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full viewport height */
+}
+
+.container {
+    flex: 1; /* Pushes the footer down */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding: 30px 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #7B1818;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold color when hovered */
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+    color: #90EE90;
+}
+
+.flag {
+    width: 30px;
+    height: 20px;
+}
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+        main {
+            flex: 2;
+            margin-right: 20px;
+        }
+        
+         main h2 {
+            color: white;
+        }
+        aside {
+            flex: 1;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            background-color: #f0f0f0;  
+            transition: all 0.3s ease;   
+        }
+        .news-item:hover {
+            background-color: #e0e0e0;   
+            transform: translateY(-5px);  
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+        .news-item img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .subscribe-box {
+            background-color: #388E3C;
+            color: white;
+            padding: 40px;
+            text-align: center;
+			
+        }
+        .subscribe-box input, .subscribe-box button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .video-section {
+            margin-top: 20px;
+        }
+
+.video-section h3 {
+    color: white;
+}
+        
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #7B1818;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Palestine Solidarity</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="aboutus.html" >About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" alt="Palestine Flag" class="flag"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+              <h2>RESOURCES</h2>
+            <div id="news-container"></div>
+        </main>
+
+        <aside>
+           
+
+            <div class="subscribe-box">
+                <h3>Don't miss out updates from us!</h3>
+                <p>We'll send a list to your inbox, once a day.</p>
+                <input type="email" placeholder="Your email address">
+                <button>SUBSCRIBE</button>
+            </div>
+
+            <div class="video-section">
+                <h3>Watch Updates from These Channels </h3>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/SWfLvfYnnwU" allowfullscreen></iframe>
+                <br><br>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/0DVbA2FHrEo" allowfullscreen></iframe>
+                <br><br>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/jLPHcaUwt8E" allowfullscreen></iframe>
+                <br><br>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/mupN9AjfFQ4" allowfullscreen></iframe><br><br>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/iRYZjOuUnlU" allowfullscreen></iframe><br><br>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/Oesk2lbW9lo" allowfullscreen></iframe><br><br>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/KI2DHe60ReI" allowfullscreen></iframe><br><br>
+
+
+
+
+
+
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        const news = [
+    {
+        title: "How Palestinian Popular Resistance Became a Global Movement",
+        content: "This article discusses the evolution of Palestinian popular resistance and its transformation into a global movement, highlighting the increasing international support against Israel's actions..",
+        author: "Shadi Abu-Ayyash",
+        image: "https://www.middleeasteye.net/sites/default/files/styles/article_page/public/images-story/000_346K86C%281%29.jpg.webp?itok=BVCg7kXM",
+        link: "https://www.middleeasteye.net/opinion/palestinian-popular-resistance-global-movement-how?"
+    },
+    {
+        title: "Solidarity with Palestine Must Be About Decolonisation, Not Just Ceasefire",
+        content: "The author argues that global pro-Palestinian movements should focus on decolonization and addressing the root causes of the conflict, rather than merely advocating for temporary ceasefires.",
+        author: "Samer Jaber",
+        image: "https://www.aljazeera.com/wp-content/uploads/2024/08/2024-04-30T194027Z_1317334070_RC27H7A9LJIL_RTRMADP_3_ISRAEL-PALESTINIANS-USA-PROTESTS-1723985492.jpg?resize=770%2C513&quality=80",
+        link: "https://example.com/article2"
+    },
+    {
+        title: "A Year On, the Palestine Solidarity Movement Must Adapt to a Widening War",
+        content: "Reflecting on the first anniversary of Israel's war on Gaza, this article emphasizes the need for the Palestine solidarity movement to evolve and address the expanding scope of the conflict.",
+        author: "John Rees",
+        image: "https://www.middleeasteye.net/sites/default/files/styles/article_page/public/images-story/Pro-Palestinian%20activists%20and%20supporters%20wave%20flags%20and%20hold%20placards%20as%20they%20pass%20through%20central%20London%2C%20during%20a%20March%20for%20Palestine%20on%20October%205%2C%202024.%20Justine%20Tallis.%20AFP%202.jpg.webp?itok=rLRQHXEw",
+        link: "https://www.middleeasteye.net/opinion/uk-palestine-solidarity-one-year-effective-movement-adapt-wider-war?"
+    },
+    
+    {
+        title: "Israeli, Palestinian Peace Activists on Fight for Solidarity, Empathy",
+        content: "This piece features insights from Israeli and Palestinian peace activists discussing the challenges and importance of fostering solidarity and empathy amidst ongoing conflicts.",
+        author: "Christy DeSmith|Harvard Staff Writer",
+        image: "https://news.harvard.edu/wp-content/uploads/2024/04/032724_Weatherhead_103.jpg?resize=2048,1366",
+        link: "https://news.harvard.edu/gazette/story/2024/04/israeli-palestinian-peace-activists-on-fight-for-solidarity-empathy/?"
+    },
+    
+     {
+        title: "Palestine Solidarity Crackdown: Challenges in the US & Europe",
+        content:"This roundtable discussion explores the increasing repression of Palestine solidarity movements in the US and Europe, analyzing the implications for activists and advocacy groups.",
+        author: "Layla Kattermann, Diala Shamas",
+        image: "https://al-shabaka.org/wp-content/uploads/2024/02/Kattermann_Shamas_Roundtable_dec2023.jpeg",
+        link: "https://al-shabaka.org/roundtables/palestine-solidarity-crackdown-challenges-in-the-us-europe/?"
+    },
+];
+
+function displayNews() {
+    const container = document.getElementById('news-container');
+    news.forEach(item => {
+        const newsElement = document.createElement('div');
+        newsElement.className = 'news-item';
+        newsElement.innerHTML = `
+            <img src="${item.image}" alt="${item.title}">
+            <h3><a href="${item.link}" target="_blank" style="color: black; text-decoration: none;">${item.title}</a></h3>
+            <p>${item.content}</p>
+            <p>By ${item.author}</p>
+        `;
+        container.appendChild(newsElement);
+    });
+}
+
+window.onload = displayNews;
+    </script>
+    
+    
+<footer>
+<p> &copy 2025 Palestine Solidarity<p>
+
+</footer>
+</body>
+</html>
+

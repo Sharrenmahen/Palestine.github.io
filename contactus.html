@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg">
+    <title>Palestine Solidarity</title>
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #c4c3ca;
+    background-color: #1f2029;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.container {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+        
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #7B1818;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold color when hovered */
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+    color: #90EE90;
+}
+
+.flag {
+    width: 30px;
+    height: 20px;
+}
+
+        .section {
+            position: relative;
+            width: 100%;
+            display: block;
+        }
+
+        .full-height {
+            min-height: 100vh;
+        }
+
+        [type="checkbox"]:checked,
+        [type="checkbox"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+
+
+        .section {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        [type="checkbox"]:checked,
+        [type="checkbox"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .checkbox:checked + label,
+        .checkbox:not(:checked) + label {
+            position: relative;
+            display: block;
+            text-align: center;
+            width: 60px;
+            height: 16px;
+            border-radius: 8px;
+            padding: 0;
+            margin: 10px auto;
+            cursor: pointer;
+            background-color: #D32F2F;
+        }
+
+        .checkbox:checked + label:before,
+        .checkbox:not(:checked) + label:before {
+            position: absolute;
+            display: block;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            color: #D32F2F;
+            background-color: #102770;
+            font-family: 'unicons';
+            content: '\eb4f';
+            z-index: 20;
+            top: -10px;
+            left: -10px;
+            line-height: 36px;
+            text-align: center;
+            font-size: 24px;
+            transition: all 0.5s ease;
+        }
+
+        .checkbox:checked + label:before {
+            transform: translateX(44px) rotate(-270deg);
+        }
+
+        .card-3d-wrap {
+            position: relative;
+            width: 800px;
+            max-width: 100%;
+            height: 700px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            perspective: 800px;
+            margin: 0 auto;
+        }
+
+        .card-3d-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            transition: all 600ms ease-out;
+        }
+
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            background-color: #2a2b38;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            background-size: 300%;
+            position: absolute;
+            border-radius: 6px;
+            left: 0;
+            top: 0;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow-y: auto;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+
+        .checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+            transform: rotateY(180deg);
+        }
+
+        .center-wrap {
+            position: relative;
+            width: 100%;
+            padding: 0 35px;
+            z-index: 20;
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-style {
+            padding: 8px 15px;
+            height: 36px;
+            width: 90%;
+            font-weight: 500;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+            outline: none;
+            color: #c4c3ca;
+            background-color: #1f2029;
+            border: none;
+            transition: all 200ms linear;
+            box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+            margin: 0 auto;
+            display: block;
+        }
+
+        textarea.form-style {
+            min-height: 80px;
+            height: auto;
+            padding: 8px 15px;
+        }
+
+        .survey-form {
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="radio"], 
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .error {
+            color: #ff4444;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+
+        .btn {
+            border-radius: 4px;
+            height: 36px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 200ms linear;
+            padding: 0 30px;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: none;
+            background-color: #ffeba7;
+            color: #102770;
+            box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #388E3C;
+            color: #ffeba7;
+            box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+        }
+
+        .required {
+            color: red;
+        }
+
+        .toggle-text {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .toggle-text span {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #c4c3ca;
+        }
+        
+        .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidenav p {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: RED;
+  display: block;
+  transition: 0.3s;
+}
+
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+ right: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+.open-button {
+            position: fixed; /* Fixed position */
+            top: 20px; /* Adjust top as needed */
+            right: 20px; /* Position on the right */
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 2; /* Ensure it's above the sidenav */
+            background-color: #D32F2F; /* Example background color */
+            color: white; /* Example text color */
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+@media screen and (max-height: 500px) {
+  .sidenav {padding-top: 30px;}
+  .sidenav a {font-size: 18px;}
+}
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ffeba7;
+        }
+
+        footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #7B1818;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Palestine Solidarity</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="aboutus.html" >About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contactus.html" class="active">Contact Us</a></li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" alt="Palestine Flag" class="flag"></li>
+            </ul>
+        </nav>
+    </header>
+     <div id="mySidenav" class="sidenav">
+        <p href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</p><br><br>
+        <p>Emergency Contact</p>
+        <p>Phone: +6012345678911</p>
+        <p>Email: emergency@palestineaid.org</p>
+        <p>Our Office</p>
+        <p>FCVAC Universiti Selangor (UNISEL) Bestari Jaya, </p>
+        <p>Jalan Timur Tambahan, 45600 Bestari Jaya, Selangor, Malaysia.</p>
+        <p>Aid Distribution Center</p>
+        <p>Masjid Unisel Bestari Jaya</p>
+    </div>
+
+ <span style="font-size:30px;cursor:pointer; position: fixed; top: 120px; right: 20px;" onclick="openNav()">&#9776; Contact Details</span>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center align-self-center">
+                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                        <div class="toggle-text">
+                            <span>Survey</span>
+                            <span>Contact Us</span>
+                        </div>
+                        <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                        <label for="reg-log"></label>
+                        <div class="card-3d-wrap mx-auto">
+                            <div class="card-3d-wrapper">
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                    
+                                       <form id="solidaritySurvey" class="survey-form" action="" method="get">
+                                            <h2>PALESTINE SOLIDARITY & HUMAN RIGHTS SURVEY</h2>
+                                            
+                                            <div class="form-group">
+                                                <label for="name">Name:<span class="required">*</span></label>
+                                                <input type="text" id="name" name="name" class="form-style" required>
+                                                <span id="nameError" class="error"></span>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="email">Email:<span class="required">*</span></label>
+                                                <input type="email" id="email" name="email" class="form-style" required>
+                                                <span id="emailError" class="error"></span>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="age">Age:<span class="required">*</span></label>
+                                                <input type="number" id="age" name="age" min="12" max="100" class="form-style" required>
+                                                <span id="ageError" class="error"></span>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Do you support Palestine solidarity?<span class="required">*</span></label>
+                                                <div>
+                                                    <input type="radio" id="supportYes" name="support" value="yes" required>
+                                                    <label for="supportYes">Yes</label>
+                                                    <input type="radio" id="supportNo" name="support" value="no">
+                                                    <label for="supportNo">No</label>
+                                                    <input type="radio" id="supportNeutral" name="support" value="neutral">
+                                                    <label for="supportNeutral">Neutral</label>
+                                                </div>
+                                                <span id="supportError" class="error"></span>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="nationality">Nationality:<span class="required">*</span></label>
+                                                <select id="nationality" name="nationality" class="form-style" required>
+                                                    <option value="" disabled selected>Select Nationality</option>
+                                                    <option value="us">United States</option>
+                                                    <option value="ca">Canada</option>
+                                                    <option value="uk">United Kingdom</option>
+                                                    <option value="de">Germany</option>
+                                                    <option value="fr">France</option>
+                                                    <option value="other">Other</option>
+                                                </select>
+                                                <span id="nationalityError" class="error"></span>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="opinion">Your Opinion on Palestine Solidarity:<span class="required">*</span></label>
+                                                <textarea id="opinion" name="opinion" class="form-style" required></textarea>
+                                                <span id="opinionError" class="error"></span>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="surveyDate">Date of Participation:<span class="required">*</span></label>
+                                                <input type="date" id="surveyDate" name="surveyDate" class="form-style" required>
+                                                <span id="dateError" class="error"></span>
+                                            </div>
+
+                                      <button type="submit" class="btn">Submit Survey</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="center-wrap">
+                                       <form action="" method="get" class="section text-center">
+
+                       <h2>CONTACT US</h2>
+                                            <p>Get in touch to learn more about how you can support Palestine or to request assistance.</p><br>
+                                            <div class="form-group">
+                                                <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <input type="text" name="message" class="form-style" placeholder="Your Message" id="message" autocomplete="off">
+                                            </div>
+                       <button type="submit" class="btn">Submit </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById('solidaritySurvey').addEventListener('submit', function (event) {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.querySelectorAll('.error').forEach(element => element.textContent = '');
+
+            // Name validation
+            const nameInput = document.getElementById('name');
+            if (!nameInput.value.trim()) {
+                document.getElementById('nameError').textContent = "Name is required";
+                isValid = false;
+            }
+
+            // Email validation
+            const emailInput = document.getElementById('email');
+            if (!emailInput.value.trim()) {
+                document.getElementById('emailError').textContent = "Email is required";
+                isValid = false;
+            } else if (!isValidEmail(emailInput.value)) {
+                document.getElementById('emailError').textContent = "Invalid email format";
+                isValid = false;
+            }
+
+            // Age validation
+            const ageInput = document.getElementById('age');
+            if (!ageInput.value.trim()) {
+                document.getElementById('ageError').textContent = "Age is required";
+                isValid = false;
+            }
+
+            // Radio button validation
+            const supportRadio = document.querySelector('input[name="support"]:checked');
+            if (!supportRadio) {
+                document.getElementById('supportError').textContent = "Please select an option.";
+                isValid = false;
+            }
+
+            // Nationality validation
+            const nationalitySelect = document.getElementById('nationality');
+            if (!nationalitySelect.value) {
+                document.getElementById('nationalityError').textContent = "Please select your nationality.";
+                isValid = false;
+            }
+
+            // Opinion validation
+            const opinionTextarea = document.getElementById('opinion');
+            if (!opinionTextarea.value.trim()) {
+                document.getElementById('opinionError').textContent = "Opinion is required.";
+                isValid = false;
+            }
+
+            // Date validation
+            const surveyDateInput = document.getElementById('surveyDate');
+            if (!surveyDateInput.value) {
+                document.getElementById('dateError').textContent = "Date is required.";
+                isValid = false;
+            }
+
+            // Prevent form submission if validation fails
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+    });
+
+    // Sidebar Functions
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+<footer>
+    <p> &copy 2025 Palestine Solidarity<p>
+    
+    </footer>
+</body>
+</html>

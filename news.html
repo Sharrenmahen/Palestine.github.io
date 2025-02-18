@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg">
+    <title>Palestine Solidarity</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #c4c3ca;
+            background-color: #1f2029;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        header {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 15px 30px;
+           background: #7B1818;
+           color: white;
+           transition: background-color 0.3s ease;
+        }
+        .logo {
+           font-size: 24px;
+           font-weight: bold;
+           color: white;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+           text-decoration: none;
+           color: white;
+           font-weight: bold;
+           transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+           color: #FFD700; /* Gold color when hovered */
+        }
+
+        nav ul li a.active {
+           text-decoration: underline;
+           color: #90EE90;
+        }
+        
+        .flag {
+           width: 30px;
+           height: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 50px;
+        }
+        .news-section {
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+        .news-item {
+            background-color: #2a2b38;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            color: #ffeba7;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #7B1818;
+            color: white;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Palestine Solidarity</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" alt="Palestine Flag" class="flag"></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="news-section">
+        <h2>Latest News</h2>
+        <div class="news-container" id="news-container"></div>
+    </section>
+    
+    <script>
+        const newsData = [
+            { title: "Palestine Solidarity Movement Grows", content: "The global movement supporting Palestine continues to gain traction...", link: "https://www.counterfire.org/article/out-for-palestine-trade-union-solidarity-grows/" },
+            { title: "Recent Developments in Gaza", content: "New updates on the situation in Gaza as international calls for peace rise...", link: "https://www.bbc.com/news/topics/c2vdnvdg6xxt" },
+            { title: "Israel-Gaza war in maps and charts", content: "Live tracker...", link: "https://www.aljazeera.com/news/longform/2023/10/9/israel-hamas-war-in-maps-and-charts-live-tracker" }
+        ];
+        
+        function loadNews() {
+            const container = document.getElementById('news-container');
+            newsData.forEach(news => {
+                const newsItem = document.createElement('div');
+                newsItem.className = 'news-item';
+                newsItem.innerHTML = `<h3><a href="${news.link}" style="color: #ffeba7;">${news.title}</a></h3><p>${news.content}</p>`;
+                container.appendChild(newsItem);
+            });
+        }
+        
+        window.onload = loadNews;
+    </script>
+    
+    <footer>
+        <p>&copy; 2025 Palestine Solidarity</p>
+    </footer>
+</body>
+</html>
+
