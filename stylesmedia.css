@@ -74,7 +74,7 @@ nav ul li a.active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     text-align: center;
-    border: 3px solid#D32F2F; 
+    border: 3px green; 
 }
 
 .photo-box img {
